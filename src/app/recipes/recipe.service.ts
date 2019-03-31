@@ -21,16 +21,16 @@ export class RecipeService{
      'this is simply a test',
       'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
       [
-        new Ingredient('Banana', 5),
-      new Ingredient('bread', 3)
+        new Ingredient('Peach', 5),
+      new Ingredient('Apples', 3)
       ]),
 
     new Recipe('A test Recipe',
      'this is simply a test',
       'https://payload.cargocollective.com/1/9/290469/5930422/recipe-logo-1.jpg',
       [
-        new Ingredient('Banana', 5),
-        new Ingredient('bread', 3)
+        new Ingredient('Salade', 5),
+        new Ingredient('Rice', 3)
       ])
   ];
 
@@ -42,6 +42,10 @@ export class RecipeService{
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  getRecipeById(id: number){
+   return this.recipes[id];
   }
 
 }
